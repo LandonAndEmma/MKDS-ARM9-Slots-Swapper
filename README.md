@@ -1,2 +1,2 @@
 # MKDS-ARM9-Slots-Swapper
-Swap Mario Kart DS ID special stuff like weather.
+Swap Mario Kart DS course ID specific stuff like weather.
