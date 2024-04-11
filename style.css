@@ -4,14 +4,16 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    min-height: 100vh;
+    justify-content: center;
+    height: 100vh;
 }
 
 h1 {
     color: #fff;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 input[type="file"] {
@@ -43,17 +45,10 @@ select {
 label {
     color: #fff;
     font-size: 18px;
+    margin-bottom: 10px;
 }
 
 #trackList {
     height: 300px;
-}
-
-/* Additional styling for buttons */
-#fileInputButton {
-    background-color: #FF4500;
-}
-
-#fileInputButton:hover {
-    background-color: #FF6347;
+    margin-bottom: 20px;
 }
