@@ -8,6 +8,8 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background-image: url('bg.png');
+    background-repeat: repeat;
 }
 
 h1 {
