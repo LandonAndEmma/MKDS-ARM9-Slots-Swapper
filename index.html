@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mario Kart DS ARM9 Music Table Editor</title>
+</head>
+<body>
+<h1>Mario Kart DS ARM9 Music Table Editor</h1>
+<input type="file" id="fileInput" accept=".bin">
+<br><br>
+<button onclick="openFile()">Open</button>
+<button onclick="saveFile()">Save</button>
+<button onclick="saveFileAs()">Save As</button>
+<button onclick="openHelp()">Help</button>
+<button onclick="openRepository()">Repository</button>
+<br><br>
+<label for="trackList">Select a track to change the SEQ value:</label>
+<select id="trackList" size="15" style="width: 200px;" onchange="onListboxSelect()">
+<!-- Track list options will be added dynamically -->
+</select>
+<script src="code.js"></script>
+</body>
+</html>
