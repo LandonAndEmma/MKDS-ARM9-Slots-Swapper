@@ -115,7 +115,7 @@ async function openPopup() {
     const newSeqValue = prompt(`Enter new course value for ${selectedTrack}:`, ARM_VALUES[offset]);
     if (newSeqValue !== null) {
         const intValue = parseInt(newSeqValue);
-        if (!isNaN(intValue) && intValue >= 0 && intValue <= 75) {
+        if (!isNaN(intValue) && intValue > 0 && intValue < 55) {
             ARM_VALUES[offset] = intValue;
             refreshListbox();
             alert(`SEQ value for ${selectedTrack} changed to ${intValue}`);
