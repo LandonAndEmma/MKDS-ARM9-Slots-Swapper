@@ -77,17 +77,17 @@ async function saveFileAs() {
 
 function openHelp() {
     const helpMessage = `
-    This program allows you to edit the music track SEQ IDs in the arm9.bin file of Mario Kart DS.\n\n
+    This program allows you to edit the course specific slot IDs in the arm9.bin file of Mario Kart DS.\n\n
     1. To get started, go to File > Open and select the arm9.bin file you want to edit.\n\n
-    2. Once the file is opened, click on a track in the list to change its SEQ ID.\n\n
+    2. Once the file is opened, click on a slot in the list to change its course ID.\n\n
     3. After making changes, go to File > Save to save the modified file.\n\n
-    Original Code: Ermelber, Yami, MkDasher\n
-    Fixed and made into a Python GUI app by Landon & Emma`;
+    Documentation: Southport\n
+    Code by Landon & Emma`;
     alert(helpMessage);
 }
 
 function openRepository() {
-    const repositoryUrl = 'https://github.com/LandonAndEmma/MKDS-ARM9-Music-Editor';
+    const repositoryUrl = 'https://github.com/LandonAndEmma/MKDS-ARM9-Slots-Swapper';
     window.open(repositoryUrl, '_blank');
 }
 
@@ -112,7 +112,7 @@ async function openPopup() {
     const selectedTrack = trackList.options[trackList.selectedIndex].text;
     const offset = ARM_OFFSETS[selectedTrack];
 
-    const newSeqValue = prompt(`Enter new SEQ value for ${selectedTrack}:`, ARM_VALUES[offset]);
+    const newSeqValue = prompt(`Enter new course value for ${selectedTrack}:`, ARM_VALUES[offset]);
     if (newSeqValue !== null) {
         const intValue = parseInt(newSeqValue);
         if (!isNaN(intValue) && intValue >= 0 && intValue <= 75) {
@@ -120,7 +120,7 @@ async function openPopup() {
             refreshListbox();
             alert(`SEQ value for ${selectedTrack} changed to ${intValue}`);
         } else {
-            alert('Invalid SEQ value. Value must be between 0 and 75.');
+            alert('Invalid course value. Value must be between 1 and 54.');
         }
     }
 }
