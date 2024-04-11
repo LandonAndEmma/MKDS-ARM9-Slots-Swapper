@@ -1,0 +1,59 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #3498db;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+button {
+    background-color: #FFD700;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #FFA500;
+}
+
+select {
+    width: 200px;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+label {
+    color: #fff;
+    font-size: 18px;
+}
+
+#trackList {
+    height: 300px;
+}
+
+/* Additional styling for buttons */
+#fileInputButton {
+    background-color: #FF4500;
+}
+
+#fileInputButton:hover {
+    background-color: #FF6347;
+}
