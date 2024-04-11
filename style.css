@@ -1,6 +1,10 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('font.ttf') format('truetype');
+}
+
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #3498db;
+    font-family: 'CustomFont', Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
