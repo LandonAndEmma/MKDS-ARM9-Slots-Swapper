@@ -45,9 +45,9 @@ async function saveFile() {
 function openHelp() {
     const helpMessage = `
     This program allows you to edit the course specific slot IDs in the arm9.bin file of Mario Kart DS.\n\n
-    1. To get started, go to File > Open and select the arm9.bin file you want to edit.\n\n
+    1. To get started, click the open button and select the arm9.bin file you want to edit.\n\n
     2. Once the file is opened, click on a slot in the list to change its course ID.\n\n
-    3. After making changes, go to File > Save to save the modified file.\n\n
+    3. After making changes, click the save button to save the modified file.\n\n
     Documentation: Southport\n
     Code by Landon & Emma`;
     alert(helpMessage);
