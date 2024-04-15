@@ -14,103 +14,111 @@
 <meta name="theme-color" content="#ffffff">
 <style>
     body {
+        display: grid;
+        place-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    #container {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     #buttonContainer {
-        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     #trackListContainer {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
         align-items: flex-start;
-        justify-content: space-between;
-        width: 100%;
-        margin-top: 20px;
     }
 
     #trackList {
-        width: 200px;
+        width: 100%;
     }
 
     #courseExplanation {
-        width: 200px;
-        margin-left: 20px;
+        max-width: 200px;
     }
 </style>
 </head>
 <body>
-<h1>mario kart ds arm9 course specific slot swapper</h1>
-<input type="file" id="fileInput" accept=".bin">
-<br><br>
-<button onclick="openFile()">Open</button>
-<button onclick="saveFile()">Save</button>
-<button onclick="openHelp()">Help</button>
-<button onclick="openRepository()">Repository</button>
-<br><br>
-<label for="trackList">select a track to change the course value:</label>
-<select id="trackList" size="15" style="width: 200px;" onchange="onListboxSelect()">
-<!-- Track list options will be added dynamically -->
-</select>
-<label id="courseExplanation">Course ID corresponds to:</label>
-<ul>
-    <li>1 - GCN Yoshi Circuit</li>
-    <li>2 - old_mario_gc</li>
-    <li>3 - luigi_course</li>
-    <li>4 - dokan_course</li>
-    <li>5 - test1_course</li>
-    <li>6 - donkey_course</li>
-    <li>7 - wario_course</li>
-    <li>8 - nokonoko_course</li>
-    <li>9 - GCN Baby Park</li>
-    <li>10 - SNES Mario Circuit 1</li>
-    <li>11 - N64 Moo Mario Farm</li>
-    <li>12 - GBA Bowser Castle 2</li>
-    <li>13 - GBA Peach Circuit</li>
-    <li>14 - GCN Luigi Circuit</li>
-    <li>15 - SNES Koopa Beach 2</li>
-    <li>16 - N64 Frappe Snowland (snow default)</li>
-    <li>17 - Tick-Tock Clock</li>
-    <li>18 - Luigi's Mansion</li>
-    <li>19 - Airship Fortress</li>
-    <li>20 - Figure-8 Circuit</li>
-    <li>21 - test_circle</li>
-    <li>22 - Yoshi Falls</li>
-    <li>23 - N64 Banshee Boardwalk</li>
-    <li>24 - Shroom Ridge</li>
-    <li>25 - Mario Circuit</li>
-    <li>26 - Peach Gardens</li>
-    <li>27 - Desert Hills</li>
-    <li>28 - Delfino Square</li>
-    <li>29 - Rainbow Road</li>
-    <li>30 - DK Pass</li>
-    <li>31 - Cheep Cheep Beach</li>
-    <li>32 - Bowser Castle</li>
-    <li>33 - Waluigi Pinball</li>
-    <li>34 - Wario Stadium (flashing lights default)</li>
-    <li>35 - SNES Donut Plains 1</li>
-    <li>36 - N64 Choco Mountain</li>
-    <li>37 - GBA Luigi Circuit (rain default)</li>
-    <li>38 - GCN Mushroom Bridge</li>
-    <li>39 - SNES Choco Island 2</li>
-    <li>40 - GBA Sky Garden</li>
-    <li>41 - mini_block_course</li>
-    <li>42 - Block Fort</li>
-    <li>43 - Pipe Plaza</li>
-    <li>44 - Nintendo DS</li>
-    <li>45 - Twilight House</li>
-    <li>46 - Palm Shore</li>
-    <li>47 - Tart Top</li>
-    <li>48 - mr_stage1</li>
-    <li>49 - mr_stage2</li>
-    <li>50 - mr_stage3</li>
-    <li>51 - mr_stage4</li>
-    <li>52 - Award</li>
-    <li>53 - StaffRoll</li>
-    <li>54 - StaffRollTrue</li>
-</ul>
+<div id="container">
+    <div id="buttonContainer">
+        <button onclick="openFile()">Open</button>
+        <button onclick="saveFile()">Save</button>
+        <button onclick="openHelp()">Help</button>
+        <button onclick="openRepository()">Repository</button>
+    </div>
+    <div id="trackListContainer">
+        <select id="trackList" size="15" onchange="onListboxSelect()">
+            <!-- Track list options will be added dynamically -->
+        </select>
+        <div id="courseExplanation">
+            <label>Course ID corresponds to:</label>
+            <ul>
+                <li>1 - GCN Yoshi Circuit</li>
+                <li>2 - old_mario_gc</li>
+                <li>3 - luigi_course</li>
+                <li>4 - dokan_course</li>
+                <li>5 - test1_course</li>
+                <li>6 - donkey_course</li>
+                <li>7 - wario_course</li>
+                <li>8 - nokonoko_course</li>
+                <li>9 - GCN Baby Park</li>
+                <li>10 - SNES Mario Circuit 1</li>
+                <li>11 - N64 Moo Mario Farm</li>
+                <li>12 - GBA Bowser Castle 2</li>
+                <li>13 - GBA Peach Circuit</li>
+                <li>14 - GCN Luigi Circuit</li>
+                <li>15 - SNES Koopa Beach 2</li>
+                <li>16 - N64 Frappe Snowland (snow default)</li>
+                <li>17 - Tick-Tock Clock</li>
+                <li>18 - Luigi's Mansion</li>
+                <li>19 - Airship Fortress</li>
+                <li>20 - Figure-8 Circuit</li>
+                <li>21 - test_circle</li>
+                <li>22 - Yoshi Falls</li>
+                <li>23 - N64 Banshee Boardwalk</li>
+                <li>24 - Shroom Ridge</li>
+                <li>25 - Mario Circuit</li>
+                <li>26 - Peach Gardens</li>
+                <li>27 - Desert Hills</li>
+                <li>28 - Delfino Square</li>
+                <li>29 - Rainbow Road</li>
+                <li>30 - DK Pass</li>
+                <li>31 - Cheep Cheep Beach</li>
+                <li>32 - Bowser Castle</li>
+                <li>33 - Waluigi Pinball</li>
+                <li>34 - Wario Stadium (flashing lights default)</li>
+                <li>35 - SNES Donut Plains 1</li>
+                <li>36 - N64 Choco Mountain</li>
+                <li>37 - GBA Luigi Circuit (rain default)</li>
+                <li>38 - GCN Mushroom Bridge</li>
+                <li>39 - SNES Choco Island 2</li>
+                <li>40 - GBA Sky Garden</li>
+                <li>41 - mini_block_course</li>
+                <li>42 - Block Fort</li>
+                <li>43 - Pipe Plaza</li>
+                <li>44 - Nintendo DS</li>
+                <li>45 - Twilight House</li>
+                <li>46 - Palm Shore</li>
+                <li>47 - Tart Top</li>
+                <li>48 - mr_stage1</li>
+                <li>49 - mr_stage2</li>
+                <li>50 - mr_stage3</li>
+                <li>51 - mr_stage4</li>
+                <li>52 - Award</li>
+                <li>53 - StaffRoll</li>
+                <li>54 - StaffRollTrue</li>
+            </ul>
+        </div>
+    </div>
+</div>
 <script src="code.js"></script>
 </body>
 </html>
