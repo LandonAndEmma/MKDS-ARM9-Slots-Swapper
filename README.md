@@ -1,7 +1,7 @@
 ## Mario Kart DS ARM9 Weather Slot Swapper
 
 ### Description
-The Mario Kart DS ARM9 Music Slots Table Editor is a web tool designed to allow users to edit music slot values within Mario Kart DS' `arm9.bin`. With this tool, you can utilize any SSEQ on most slots of the game, enhancing your Mario Kart DS experience.
+The Mario Kart DS ARM9 Music Slots Table Editor is a web tool designed to allow users to edit music slot values within Mario Kart DS' `arm9.bin`. With this tool, you can weather slots on any course slot of the game, enhancing your Mario Kart DS experience.
 
 This tool is based on [documentation](https://wiki.dshack.org/Wiki.jsp?page=Swapping%20Weather%20Slots) by [Southport](https://www.youtube.com/c/Southport08).
 
